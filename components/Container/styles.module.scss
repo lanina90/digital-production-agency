@@ -1,0 +1,24 @@
+@import '../../styles/utils/mixin';
+
+.container {
+  width: 358px;
+  margin: auto;
+  border: 1px solid getColor(grey, 15);
+
+  @include breakpoint(tablet) {
+    width: 558px;
+  }
+
+  @include breakpoint(laptop) {
+    width: 968px;
+  }
+
+  @include breakpoint(desktop) {
+    width: 1280px;
+  }
+
+  @include breakpoint(large) {
+    width: 1596px;
+  }
+
+}

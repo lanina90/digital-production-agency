@@ -1,6 +1,17 @@
 @import '@/styles/_main.scss';
 
 :root {
+  --cube-img-w: 40px;
+  --cube-img-h: 40px;
+  --text-img-w: 72px;
+  --text-img-h: 13px;
+
+  @include breakpoint(large){
+    --image-w: 71px;
+    --image-h: 60px;
+    --text-img-w: 107px;
+    --text-img-h: 20px;
+  }
 }
 
 @layer base {
@@ -20,11 +31,11 @@
     font-weight: 300;
     font-size: 16px;
     line-height: 1.2;
+    background: $bg-grey;
   }
 
   main {
     flex-grow: 1;
-    background: getColor(grey, 10);
   }
 
   a {
@@ -62,8 +73,9 @@
   }
 
   p {
-    color: getColor(grey, 90);
+    color: $paragraph;
     font-style: normal;
     font-weight: 400;
   }
+
 }
