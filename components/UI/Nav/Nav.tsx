@@ -46,7 +46,7 @@ const Nav = () => {
           </Link>
         )}
       </nav>
-      <Button component='link' href='/contactc'>Contact Us</Button>
+      <Button className={styles.button} variant='filled' component='link' href='/contactc'>Contact Us</Button>
     </div>
   );
 };

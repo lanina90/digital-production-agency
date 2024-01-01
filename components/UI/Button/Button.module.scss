@@ -3,9 +3,34 @@
 .button{
   width: 100%;
   display: flex;
-  padding: 12px 18px;
   align-items: center;
   gap: 8px;
   border-radius: 6px;
-  background: $button;
+  cursor: pointer;
+  font-family: var(--barlow-font);
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+
+
+  &--filled{
+    background: $button;
+    color: $menuLinkActive;
+    padding: 14px 20px;
+  }
+
+  &--text{
+    display: flex;
+    padding: 14px 20px;
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    border-radius: 8px;
+    border: 1px solid $linkText;
+    background: rgba(36, 36, 36, 0.20);
+    backdrop-filter: blur(6px);
+    color: #FFF;
+  }
+
 }

@@ -1,0 +1,117 @@
+@import "styles/utils/variables";
+@import "styles/utils/mixin";
+
+.hero {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 80px 16px 0 16px;
+  height: 566px;
+  gap: 40px;
+  background-image: url("/images/hero/hero.svg");
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  position: relative;
+
+  @include breakpoint(tablet){
+    background-size: 100% auto;
+  }
+
+  @include breakpoint(laptop){
+    background-image: url("/images/hero/hero-big.svg");
+  }
+
+  @include breakpoint(desktop){
+    padding-top: 112px;
+    height: 691px;
+  }
+
+  @include breakpoint(large){
+    padding-top: 112px;
+    height: 796px;
+  }
+
+
+
+  .info {
+    @include flex(column, center, center, 30px);
+
+    & h1{
+      font-size: 34px;
+
+      @include breakpoint(desktop){
+        font-size: 48px;
+      }
+
+      @include breakpoint(large){
+        font-size: 68px;
+      }
+    }
+
+    .intro{
+      display: flex;
+      padding: 18px 20px;
+      align-items: center;
+      align-self: center;
+      gap: 20px;
+      border-radius: 8px;
+      border: 1px solid $menuLinkActive;
+      background: rgba(36, 36, 36, 0.20);
+      backdrop-filter: blur(6px);
+      color: $grey60;
+      text-align: center;
+      font-family: var(--barlow-font);
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+      width: 100%;
+
+      @include breakpoint(desktop){
+        padding: 18px 30px;
+        width: 699px;
+        font-size: 18px;
+      }
+
+      @include breakpoint(large){
+        width: 895px;
+        padding: 24px 40px;
+        font-size: 22px;
+      }
+
+
+      & span {
+        padding: 8px 10px;
+        border-radius: 6px;
+        background: $grey15;
+        box-sizing: border-box;
+        line-height: 42px;
+      }
+    }
+  }
+
+  .actions {
+    @include flex(row, center, center, 13px);
+
+    & a {
+      height: 45px;
+      width: 108px;
+    }
+
+  }
+
+  .badge{
+    display: flex;
+    padding: 14px 24px;
+    align-items: flex-start;
+    gap: 10px;
+    border-radius: 100px;
+    border: 1px solid $grey15;
+    background: $bg-grey;
+    color: $green99;
+    position: absolute;
+    bottom: -25px ;
+    z-index: 999;
+  }
+}
