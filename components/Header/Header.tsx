@@ -3,12 +3,13 @@ import React from 'react';
 import styles from './styles.module.scss'
 import Image from "next/image";
 import NavMenu from "@/components/Header/Menu/NavMenu";
+import Link from "next/link";
 
 const Header = () => {
 
   return (
     <header className={styles.header}>
-      <div className={styles.logo}>
+      <Link  href='/' className={styles.logo}>
         <Image
           src='/images/header/logo/cube.svg'
           alt='logo-cube'
@@ -23,7 +24,7 @@ const Header = () => {
           height={100}
           style={{ width: 'var(--text-img-w)', height: 'var(--text-img-h)' }}
         />
-      </div>
+      </Link>
       <NavMenu/>
     </header>
   );

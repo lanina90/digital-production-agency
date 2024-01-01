@@ -1,4 +1,7 @@
+'use client'
+
 import { useMediaQuery } from "react-responsive";
+import {useEffect, useState} from "react";
 
 export const useMedia = () => {
   const isLarge = useMediaQuery({
@@ -13,5 +16,15 @@ export const useMedia = () => {
   const isMobile = useMediaQuery({
     query: "(max-width: 767px)",
   });
-  return { isDesktop, isLaptop, isMobile, isLarge };
+
+  const [deviceType, setDeviceType] = useState('');
+
+  useEffect(() => {
+    if (isDesktop) setDeviceType('desktop');
+    else if (isLaptop) setDeviceType('laptop');
+    else if (isLarge) setDeviceType('large');
+    else setDeviceType('mobile');
+  }, [isDesktop, isLarge, isLaptop, isMobile]);
+
+  return { deviceType };
 };

@@ -7,13 +7,13 @@ import Image from "next/image";
 import Nav from "@/components/UI/Nav/Nav";
 
 const NavMenu = () => {
-  const {isMobile, isLaptop} = useMedia();
+  const {deviceType} = useMedia();
   const [showIcon, setShowIcon] = useState(false);
-  const [isOpen, setIsOpen] = useState(true)
+  const [isOpen, setIsOpen] = useState(false)
 
   useLayoutEffect(() => {
-    setShowIcon(isMobile || isLaptop);
-  }, [isMobile, isLaptop]);
+    setShowIcon(deviceType === 'mobile' || deviceType === 'laptop');
+  }, [deviceType]);
 
   const menuOpenHandler = () => {
     setIsOpen(!isOpen)
@@ -36,6 +36,7 @@ const NavMenu = () => {
           <Nav/>
         </div>
       }
+
 
     </div>
   );

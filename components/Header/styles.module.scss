@@ -29,7 +29,6 @@
   .logo {
     @include flex(null, center, null, 7px);
 
-
     @include breakpoint(large) {
       @include flex(null, center, center, 10px);
     }
@@ -46,11 +45,6 @@
     background: $bg-grey;
     transform: translateX(0);
     transition: all 2s ease;
-
-
-    .burger{
-
-    }
 
     @include breakpoint(laptop) {
       & {

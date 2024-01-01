@@ -1,7 +1,9 @@
 import React from 'react';
 import Link from "next/link";
 import {usePathname} from 'next/navigation';
+import Button from "@/components/UI/Button/Button";
 import styles from './style.module.scss'
+
 
 const Nav = () => {
   const currentRoute = usePathname();
@@ -30,23 +32,22 @@ const Nav = () => {
     {
       anchor: "Careers",
       url: "/careers"
-    },
-    {
-      anchor: "Contacts",
-      url: "/contacts"
     }
   ]
 
   return (
-    <nav className={styles.nav}>
-      {links?.map((item,  index) =>
-        <Link href={item.url}
-              key={index}
-              className={currentRoute === item.url ? styles.active : ""}>
-          {item.anchor}
-        </Link>
-      )}
-    </nav>
+    <div className={styles.wrapper}>
+      <nav className={styles.nav}>
+        {links?.map((item, index) =>
+          <Link href={item.url}
+                key={index}
+                className={currentRoute === item.url ? styles.active : ""}>
+            {item.anchor}
+          </Link>
+        )}
+      </nav>
+      <Button component='link' href='/contactc'>Contact Us</Button>
+    </div>
   );
 };
 
