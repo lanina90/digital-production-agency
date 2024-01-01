@@ -1,6 +1,7 @@
 import HeroSection from "@/app/components/Hero/HeroSection";
 import Clients from "@/app/components/Clients/Clients";
 import Services from "@/app/components/Services/Services";
+import WhyUs from "@/app/components/WhyUs/WhyUs";
 
 
 export default function Home() {
@@ -9,6 +10,7 @@ export default function Home() {
       <HeroSection/>
       <Clients/>
       <Services/>
+      <WhyUs/>
     </>
   )
 }
