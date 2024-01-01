@@ -1,9 +1,8 @@
-import styles from './page.module.css'
+import HeroSection from "@/app/components/Hero/HeroSection";
+
 
 export default function Home() {
   return (
-    <div>
-      <h1>Hello</h1>
-    </div>
+    <HeroSection/>
   )
 }
