@@ -1,0 +1,64 @@
+@import '../../styles/utils/variables';
+@import '../../styles/utils/mixin';
+
+
+.header {
+  @include flex(null, space-between, null, null);
+  padding: 40px 16px 20px 16px;
+  border-bottom: 1px solid getColor(grey, 15);
+  width: 358px;
+  margin: auto;
+  position: relative;
+
+  @include breakpoint(tablet) {
+    width: 558px;
+  }
+
+  @include breakpoint(laptop) {
+    width: 968px;
+  }
+
+  @include breakpoint(desktop) {
+    width: 1280px;
+  }
+
+  @include breakpoint(large) {
+    width: 1596px;
+  }
+
+  .logo {
+    @include flex(null, center, null, 7px);
+
+    @include breakpoint(large) {
+      @include flex(null, center, center, 10px);
+    }
+  }
+
+  .menu {
+    @include flex(null, flex-end, center, null);
+    position: absolute;
+    padding-right: 16px;
+    top: 100%;
+    left: 0;
+    width: 100%;
+    z-index: 10;
+    background: $bg-grey;
+    transform: translateX(0);
+    transition: all 2s ease;
+
+    @include breakpoint(laptop) {
+      & {
+        position: static;
+      }
+    }
+  }
+
+
+}
+
+
+
+
+
+
+

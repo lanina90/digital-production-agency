@@ -3,7 +3,9 @@ $breakpoints: (
   tablet: 768px,
   laptop: 1024px,
   desktop: 1440px,
+  large: 1920px
 );
+
 
 $palettes: (
   green: (
@@ -36,4 +38,11 @@ $palettes: (
 $black: #000;
 $white: #FFF;
 
+$bg-grey: getColor(grey, 10);
+$paragraph: getColor(grey, 90);
 $button: getColor(green, 50);
+$menuLink: getColor(grey, 90);
+$menuLinkActive: getColor(grey, 15)
+
+
+
