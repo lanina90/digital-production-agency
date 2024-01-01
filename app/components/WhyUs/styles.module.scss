@@ -1,16 +1,11 @@
 @import "styles/utils/variables";
 @import "styles/utils/mixin";
 
-.services {
 
-  .list{
-    @include flex(column,  center, center, 0);
-    width: 100%;
-  }
-
+.why{
   @include flex(column,  center, center, 0);
 
-  .intro {
+  .intro{
     display: flex;
     padding: 50px 16px;
     flex-direction: column;
@@ -53,7 +48,9 @@
     }
   }
 
+
   @include breakpoint(laptop) {
+
     .intro{
       height: 250px;
       align-items: center;
@@ -66,10 +63,25 @@
 
     .list{
       @include flex(row,  space-between, center, 0);
+      flex-wrap: wrap;
     }
   }
 
   @include breakpoint(desktop) {
+    .intro{
+
+      & h2{
+        font-size: 48px;
+      }
+
+      & p{
+        font-size: 16px;
+      }
+    }
+
+  }
+
+  @include breakpoint(large) {
     .intro{
 
       & h2{
