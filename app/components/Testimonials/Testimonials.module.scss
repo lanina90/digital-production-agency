@@ -51,6 +51,12 @@
     width: 100%;
   }
 
+  @include breakpoint(tablet){
+    .intro{
+      @include flex(column,  center, center, 10px);
+    }
+  }
+
   @include breakpoint(laptop) {
     .intro{
       height: 250px;
@@ -59,6 +65,10 @@
 
       & h2{
         font-size: 38px;
+      }
+
+      & p{
+        width: 70%;
       }
     }
 
@@ -70,6 +80,7 @@
 
   @include breakpoint(desktop) {
     .intro{
+      @include flex(column,  center, center, 20px);
 
       & h2{
         font-size: 38px;
