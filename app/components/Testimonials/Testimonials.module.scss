@@ -1,0 +1,110 @@
+@import "styles/utils/variables";
+@import "styles/utils/mixin";
+
+.testimonials{
+
+  .intro {
+    display: flex;
+    padding: 50px 16px;
+    flex-direction: column;
+    gap: 6px;
+    height: 270px;
+    width: 100%;
+    background: url("/images/services/green-background.jpg");
+    filter: grayscale(30%);
+    position: relative;
+    background-size: cover;
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(33, 32, 32, 0.6);
+    }
+
+    & h2 {
+      text-align: center;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: normal;
+      z-index: 2;
+    }
+
+    & p {
+      color: $paragraph;
+      text-align: center;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: -0.084px;
+      z-index: 2;
+    }
+  }
+
+  .list{
+    @include flex(column,  center, center, 0);
+    width: 100%;
+  }
+
+  @include breakpoint(tablet){
+    .intro{
+      @include flex(column,  center, center, 10px);
+    }
+  }
+
+  @include breakpoint(laptop) {
+    .intro{
+      height: 250px;
+      align-items: center;
+      justify-content: center;
+
+      & h2{
+        font-size: 38px;
+      }
+
+      & p{
+        width: 70%;
+      }
+    }
+
+    .list{
+      @include flex(row,  space-between, center, 0);
+      flex-wrap: wrap;
+    }
+  }
+
+  @include breakpoint(desktop) {
+    .intro{
+      @include flex(column,  center, center, 20px);
+
+      & h2{
+        font-size: 38px;
+      }
+
+      & p{
+        font-size: 16px;
+      }
+    }
+
+  }
+
+  @include breakpoint(large) {
+    .intro{
+
+      & h2{
+        font-size: 48px;
+      }
+
+      & p{
+        font-size: 18px;
+      }
+    }
+
+  }
+
+}

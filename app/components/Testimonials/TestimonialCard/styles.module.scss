@@ -1,0 +1,155 @@
+@import "styles/utils/variables";
+@import "styles/utils/mixin";
+
+.card {
+  padding: 40px 24px;
+  border-bottom: 1px solid $grey15;
+  @include flex(column, flex-start, flex-start, 24px);
+
+  .testimonial{
+    @include flex(column, center, flex-start, 20px);
+
+    & h3{
+      color: $green80;
+      font-size: 18px;
+      font-weight: 500;
+      line-height: 150%;
+      text-align: left;
+    }
+
+    & p{
+      color: $paragraph;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+    }
+  }
+
+
+  .info{
+    padding: 14px;
+    border-radius: 6px;
+    border: 1px solid $grey15;
+    background: rgba(36, 36, 36, 0.20);
+    width: 100%;
+
+    .person{
+      @include flex(row, flex-start, center, 10px);
+
+      .photo{
+        @include flex(row, center, center, 0);
+
+        & img{
+          border-radius: 8px;
+        }
+      }
+
+      .name{
+        color: #FFF;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+      }
+
+      .position{
+        color: $menuLink;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+      }
+
+    }
+
+
+  }
+
+  @include breakpoint(laptop){
+    padding: 60px 40px;
+    width: 50%;
+    flex-wrap: wrap;
+    border-left: 1px solid $grey15;
+    height: 420px;
+    @include flex(column, space-between, flex-start, 0);
+
+    .testimonial{
+      & h3{
+        height: 60px;
+      }
+    }
+  }
+
+  @include breakpoint(desktop){
+    padding: 70px 60px;
+
+    .testimonial{
+      @include flex(column, center, flex-start, 24px);
+
+      & h3{
+        font-size: 20px;
+        height: 60px;
+      }
+
+      & p{
+        font-size: 16px;
+      }
+    }
+
+    .info{
+
+      .person{
+        @include flex(row, flex-start, center, 12px);
+
+        .photo{
+
+          & img{
+            width: 50px;
+            height: 50px;
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint(large){
+    padding: 100px 80px;
+    height: 574px;
+
+    .testimonial{
+
+      & h3{
+        font-size: 28px;
+        height: 126px;
+      }
+
+      & p{
+        font-size: 18px;
+      }
+    }
+
+    .info{
+
+      .person{
+        @include flex(row, flex-start, center, 18px);
+
+        .photo{
+
+          & img{
+            width: 60px;
+            height: 60px;
+          }
+        }
+
+        .name{
+          font-size: 20px;
+        }
+
+        .position{
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}
