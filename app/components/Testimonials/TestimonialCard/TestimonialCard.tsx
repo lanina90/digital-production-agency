@@ -2,13 +2,10 @@
 
 import React from 'react';
 import Image from "next/image";
-import {useMedia} from "@/hooks/useMedia";
 import styles from './styles.module.scss'
 
 const TestimonialCard = ({title, text, name, position, photo}
                            : { title: string, text: string, name: string, position: string, photo: string }) => {
-  const {deviceType} = useMedia()
-
 
   return (
     <div className={styles.card}>
@@ -25,9 +22,6 @@ const TestimonialCard = ({title, text, name, position, photo}
             <p className={styles.name}>{name}</p>
             <p className={styles.position}>{position}</p>
           </div>
-        </div>
-        <div className={styles.name}>
-
         </div>
       </div>
     </div>
