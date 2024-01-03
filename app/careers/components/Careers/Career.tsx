@@ -22,7 +22,7 @@ const Career = () => {
         <div className={styles.intro}>
           <h2>Current Openings</h2>
           <p>We are always on the lookout for talented individuals who are passionate about creating exceptional digital
-            experiences. Whether you're a designer, engineer, project manager, or have skills that align with our
+            experiences. Whether you`&apos;re a designer, engineer, project manager, or have skills that align with our
             agency&apos;s mission, we encourage you to explore our open positions.</p>
         </div>
       </div>
