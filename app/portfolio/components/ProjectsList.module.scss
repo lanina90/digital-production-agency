@@ -1,0 +1,113 @@
+@import '../../../styles/utils/variables';
+@import '../../../styles/utils/mixin';
+
+.portfolio {
+  padding-top: 40px;
+  @include flex(column, center, center, 40px);
+
+  .intro{
+    width: 100%;
+    @include flex(column, flex-start, flex-start, 30px);
+    padding: 0 16px;
+
+    .info{
+      @include flex(column, flex-start, flex-start, 6px);
+
+      & h2{
+        color: $white;
+        font-size: 28px;
+        font-weight: 600;
+        line-height: normal;
+      }
+
+      & p {
+        color: $paragraph;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: -0.084px;
+      };
+
+    }
+
+    .text{
+      padding: 10px;
+      border-radius: 6px;
+      background: $grey15;
+      font-size: 16px;
+      font-weight: 400;
+      color: $white;
+    }
+
+  }
+
+  .projects{
+    @include flex(column, center, center, 40px);
+  }
+
+
+  @include breakpoint(laptop) {
+    padding: 80px 0;
+
+
+    .intro{
+      @include flex(column, flex-start, flex-start, 40px);
+      padding: 0 40px;
+
+      .info{
+        @include flex(column, flex-start, flex-start, 6px);
+
+        & h2{
+          font-size: 38px;
+        }
+
+        & p {
+          font-size: 16px;
+        };
+
+      }
+
+      .text{
+        font-size: 18px;
+      }
+
+    }
+
+    .projects{
+      @include flex(row, center, flex-start, 0);
+      flex-wrap: wrap;
+      border-bottom: 1px solid $grey15;
+    }
+
+  }
+
+  @include breakpoint(large) {
+    padding: 120px 0;
+    @include flex(column, center, center, 50px);
+
+
+    .intro{
+      @include flex(column, flex-start, flex-start, 50px);
+      padding: 0 50px;
+
+      .info{
+        @include flex(column, flex-start, flex-start, 14px);
+
+        & h2{
+          font-size: 48px;
+        }
+
+        & p {
+          font-size: 18px;
+        };
+
+      }
+
+      .text{
+        padding: 12px 14px;
+        font-size: 22px;
+      }
+
+    }
+  }
+}

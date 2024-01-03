@@ -1,0 +1,153 @@
+@import '../../../../styles/utils/variables';
+@import '../../../../styles/utils/mixin';
+
+.card {
+
+  @include flex(column, center, center, 20px);
+
+  .title {
+    padding: 20px 24px;
+    border: 1px solid $grey15;
+
+    & h3 {
+      text-align: left;
+      color: $grey60;
+      font-size: 20px;
+      font-weight: 500;
+
+    }
+  }
+
+  .info {
+    padding: 0 24px;
+    @include flex(column, center, center, 20px);
+
+    .image {
+      & img {
+        width: 100%;
+        height: 42%;
+      }
+    }
+
+    .link {
+      width: 100%;
+      @include flex(column, flex-start, flex-start, 10px);
+
+      & h4 {
+        color: $paragraph;
+        font-size: 18px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        letter-spacing: -0.108px;
+      }
+
+      .link-block {
+        width: 100%;
+        @include flex(row, space-between, flex-end, 0);
+
+        & span {
+          width: 70%;
+          padding: 8px 10px;
+          border-radius: 6px;
+          background: $grey15;
+          color: $grey60;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 150%;
+          letter-spacing: -0.084px;
+        }
+
+        .icon {
+          padding: 10px;
+          border-radius: 6px;
+          background: $grey15;
+          cursor: pointer;
+        }
+
+      }
+    }
+
+    .description {
+      color: $grey60;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 150%;
+    }
+  }
+
+  @include breakpoint(laptop) {
+    width: 50%;
+    border-left: 1px solid $grey15;
+    @include flex(column, center, center, 30px);
+
+    .title {
+      @include flex(column, center, flex-start, 0);
+      width: 100%;
+      padding: 24px 40px;
+      border: none;
+      border-top: 1px solid $grey15;
+      border-bottom: 1px solid $grey15;
+      height: 95px;
+
+
+      & h3 {
+        font-size: 18px;
+      }
+    }
+
+    .info {
+      padding: 0 40px 80px 40px;
+      width: 100%;
+
+      .image {
+        width: 100%;
+      }
+
+    }
+
+  }
+
+  @include breakpoint(large) {
+
+
+    .title {
+      padding: 30px 50px;
+
+      & h3 {
+        font-size: 26px;
+      }
+    }
+
+    .info {
+      padding: 0 50px 90px 50px;
+      width: 100%;
+
+      .image {
+        width: 100%;
+      }
+
+      .link {
+        & h4 {
+          font-size: 24px;
+        }
+
+        .link-block {
+
+          & span {
+            width: 50%;
+            padding: 10px 14px;
+            font-size: 20px;
+
+          }
+        }
+      }
+
+      .description {
+        font-size: 18px;
+      }
+    }
+
+
+  }
+}
