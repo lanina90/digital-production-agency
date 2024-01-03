@@ -1,0 +1,6 @@
+@import "../../../../../styles/utils/variables";
+@import "../../../../../styles/utils/mixin";
+
+.description{
+  @include flex(column, center, center, 40px);
+}

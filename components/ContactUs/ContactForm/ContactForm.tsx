@@ -2,7 +2,7 @@
 
 import React, {useState} from 'react';
 import styles from './styles.module.scss'
-import RangeSlider from "@/app/components/Contact/ContactForm/RangeSLider/RangeSlider";
+import RangeSlider from "@/components/ContactUs/ContactForm/RangeSLider/RangeSlider";
 import Button from "@/components/UI/Button/Button";
 import SuccessModal from "@/app/components/Modal/SuccessModal";
 
