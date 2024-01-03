@@ -1,5 +1,5 @@
 import React from 'react';
-import styles  from  './ProcessCard.module.scss'
+import styles  from './ProcessCard.module.scss'
 
 const ProcessCard = ({index, item: {
   name, description, id

@@ -1,0 +1,312 @@
+@import '../../../styles/utils/variables';
+@import '../../../styles/utils/mixin';
+
+
+.about {
+
+  .intro {
+    width: 100%;
+    @include flex(column, center, flex-start, 16px);
+    padding: 40px 16px;
+
+    & h2 {
+      color: $white;
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    & p {
+      color: $paragraph;
+      font-size: 14px;
+      font-weight: 400;
+      line-height: 150%;
+      letter-spacing: -0.084px;
+    }
+  }
+
+  .story{
+    @include flex(column, center, flex-start, 40px);
+    border-top: 1px solid $grey15;
+    padding-top: 40px;
+
+    .title{
+      padding: 0 24px;
+    }
+
+    .list{
+      @include flex(column, center, flex-start, 0);
+      border-top: 1px solid $grey15;
+    }
+  }
+
+  .cta{
+    padding: 40px 24px;
+    @include flex(column, center, center, 30px);
+
+    .welcome{
+      @include flex(column, center, center, 24px);
+
+      .info{
+        @include flex(column, center, center, 10px);
+
+        & h3{
+          color: $grey60;
+          font-size: 20px;
+          font-weight: 500;
+        }
+
+        & p{
+          color: $grey60;
+          font-size: 14px;
+          font-weight: 400;
+          line-height: 150%;
+        }
+      }
+    }
+
+    .container{
+      width: 100%;
+      padding: 20px;
+      @include flex(column, center, center, 20px);
+      border-radius: 10px;
+      border: 1px solid $grey15;
+      background: rgba(36, 36, 36, 0.20);
+      backdrop-filter: blur(6px);
+
+      .info{
+
+        @include flex(column, center, center, 14px);
+
+        & h3{
+          color: $grey60;
+          text-align: center;
+          font-size: 18px;
+          font-weight: 400;
+        }
+
+        .text{
+
+          padding: 10px 14px;
+          border-radius: 6px;
+          background: $grey15;
+          color: $white;
+          text-align: center;
+          font-size: 16px;
+          font-style: normal;
+          font-weight: 400;
+          line-height: 150%;
+        }
+
+      }
+
+      .action{
+        justify-content: center;
+      }
+
+
+    }
+
+
+  }
+
+  @include breakpoint(laptop) {
+
+    .intro {
+      padding: 80px 50px;
+
+      & h2 {
+        font-size: 38px;
+      }
+
+      & p {
+        font-size: 16px;
+      }
+    }
+
+    .story{
+      gap: 80px;
+      padding-top: 80px;
+
+      .title{
+        padding: 0 50px;
+
+        & h2{
+          font-size: 48px;
+        }
+
+      }
+
+      .list{
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    }
+
+    .cta{
+      padding: 60px;
+      gap: 40px;
+
+      .welcome{
+
+        & img{
+          width: 100px;
+          height: 100px;
+        }
+
+        .info{
+          gap: 14px;
+
+          & h3{
+            font-size: 24px;
+          }
+
+          & p{
+            font-size: 16px;
+          }
+        }
+      }
+
+      .container{
+
+        .info{
+          & h3{
+            font-size: 22px;
+          }
+
+          .text{
+            font-size: 18px;
+          }
+        }
+
+        .action{
+          width: 50%;
+        }
+
+      }
+
+    }
+
+  }
+
+  @include breakpoint(desktop) {
+
+    .intro {
+      padding: 80px 50px;
+
+      & h2 {
+        font-size: 38px;
+      }
+
+      & p {
+        font-size: 16px;
+      }
+    }
+
+    .story{
+      gap: 80px;
+      padding-top: 80px;
+
+      .title{
+        padding: 0 50px;
+
+        & h2{
+          font-size: 48px;
+        }
+
+      }
+
+      .list{
+        flex-direction: row;
+        flex-wrap: wrap;
+      }
+    }
+
+    .cta{
+      padding: 60px;
+      gap: 40px;
+
+      .welcome{
+        @include flex(row, center, center, 30px);
+
+        & img{
+          width: 100px;
+          height: 100px;
+        }
+      }
+
+      .container{
+        padding: 20px 30px;
+        flex-direction: row;
+
+        .info{
+          flex-direction: row;
+
+          & h3{
+            font-size: 18px;
+          }
+
+          .text{
+            padding: 10px 14px;
+            font-size: 16px;
+          }
+        }
+
+        .action{
+          width: 119px;
+        }
+
+      }
+
+
+    }
+  }
+
+  @include breakpoint(large) {
+
+    .cta{
+      padding: 80px;
+      gap: 50px;
+
+      .welcome{
+        gap: 40px;
+
+        & img{
+          width: 150px;
+          height: 150px;
+        }
+
+        .info{
+          gap: 20px;
+
+          & h3{
+            font-size: 30px;
+          }
+
+          & p{
+            font-size: 18px;
+          }
+        }
+      }
+
+      .container{
+        padding: 24px 40px;
+
+        .info{
+          & h3{
+            font-size: 20px;
+          }
+
+          .text{
+            font-size: 20px;
+          }
+        }
+
+        .action{
+          width: 170px;
+        }
+
+      }
+    }
+
+  }
+}

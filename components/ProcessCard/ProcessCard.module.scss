@@ -1,5 +1,5 @@
-@import '../../../../styles/utils/variables';
-@import '../../../../styles/utils/mixin';
+@import '../../styles/utils/variables';
+@import '../../styles/utils/mixin';
 
 .card{
   padding: 40px 24px;
@@ -34,7 +34,8 @@
 
   @include breakpoint(laptop){
     width: 50%;
-    height: 380px;
+    min-height: 562px;
+
     padding: 80px 40px;
     gap: 40px;
     border-left: 1px solid $grey15;
