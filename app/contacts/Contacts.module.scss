@@ -1,0 +1,172 @@
+@import '../../styles/utils/variables';
+@import '../../styles/utils/mixin';
+
+
+.contact {
+  @include flex(column, center, center, 20px);
+  padding: 30px 24px;
+
+  .item {
+    width: 100%;
+    @include flex(row, center, center, 14px);
+    padding: 18px 20px;
+    border-radius: 6px;
+    background: $grey15;
+
+    & svg {
+      width: 24px;
+      height: 24px;
+    }
+
+    & span {
+      color: $paragraph;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 150%;
+    }
+  }
+
+
+  @include breakpoint(laptop) {
+    @include flex(row, center, center, 20px);
+    .item {
+      @include flex(row, center, center, 7px);
+      padding: 10px 0;
+
+      & svg {
+        width: 20px;
+        height: 20px;
+      }
+
+      & span {
+        font-size: 16px;
+      }
+    }
+  }
+
+  @include breakpoint(large) {
+    .item {
+      & span {
+        font-size: 18px;
+      }
+    }
+  }
+}
+
+
+.stay {
+  border-top: 1px solid $grey15;
+
+  .opening {
+    @include flex(row, center, center, 14px);
+    padding: 20px 0;
+
+    & p {
+      color: $paragraph;
+      font-size: 16px;
+      font-weight: 500;
+      line-height: 150%;
+
+      &.days {
+        border-radius: 4px;
+        background: $grey15;
+        padding: 10px 20px;
+      }
+    }
+
+    @include breakpoint(laptop) {
+      padding: 50px 0;
+    }
+
+    @include breakpoint(large) {
+      & p {
+        font-size: 18px;
+
+        &.days {
+          padding: 12px 24px;
+        }
+      }
+    }
+
+  }
+
+  .social {
+    @include flex(column, center, center, 14px);
+    padding: 16px 10px 16px 20px;
+    border-radius: 8px;
+    border: 1px solid $grey15;
+    width: 100%;
+
+    & p {
+      color: $paragraph;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+    }
+
+    .icons {
+      @include flex(row, center, center, 10px);
+
+      .icon {
+        cursor: pointer;
+        @include flex(null, center, flex-start, 10px);
+        padding: 16px;
+        border-radius: 6px;
+        border: 1px solid #2E2E2E;
+        background: linear-gradient(180deg, #242424 0%, rgba(36, 36, 36, 0.00) 100%);
+      }
+
+    }
+
+    @include breakpoint(laptop) {
+      @include flex(row, center, center, 14px);
+      padding: 10px 10px 10px 20px;
+      width: 367px;
+      border: none;
+
+      & p {
+        font-size: 18px;
+      }
+    }
+
+    @include breakpoint(large) {
+      @include flex(row, flex-end, center, 20px);
+      width: 555px;
+
+      & p {
+        font-size: 18px;
+      }
+
+      .icons {
+        .icon {
+          width: 64px;
+          height: 64px;
+
+          & svg {
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+
+
+  }
+
+  @include breakpoint(laptop) {
+    @include flex(row, center, center, 90px);
+  }
+
+
+}
+
+
+
+
+
+
+
+
+
