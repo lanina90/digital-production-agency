@@ -1,0 +1,27 @@
+@import '../../../styles/utils/variables';
+@import '../../../styles/utils/mixin';
+
+.process{
+  padding-top: 40px;
+  @include flex(column, center, center, 40px);
+
+  .list{
+    @include flex(column, center, center, 0);
+  }
+
+  @include breakpoint(laptop) {
+    padding-top: 80px;
+
+    .list{
+      flex-direction: row;
+      flex-wrap: wrap;
+    }
+
+  }
+
+
+  @include breakpoint(large) {
+    padding-top: 120px;
+    gap: 50px;
+  }
+}
