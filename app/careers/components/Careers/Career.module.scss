@@ -1,0 +1,348 @@
+@import '../../../../styles/utils/variables';
+@import '../../../../styles/utils/mixin';
+
+.career {
+  padding-top: 40px;
+  @include flex(column, center, flex-start, 40px);
+
+  .welcome{
+    @include flex(column, center, flex-start, 30px);
+    padding: 0 16px;
+
+    .intro{
+      @include flex(column, center, flex-start, 6px);
+
+
+      & h2{
+        text-align: left;
+        color: $white;
+        font-size: 28px;
+        font-weight: 600;
+      }
+
+      & p{
+        color: $paragraph;
+        font-size: 14px;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: -0.084px;
+      }
+
+    }
+
+    .why{
+      padding: 10px;
+      border-radius: 6px;
+      background: $grey15;
+      color: $white;
+      font-size: 16px;
+      font-weight: 400;
+    }
+  }
+
+  .work{
+    @include flex(column, center, center, 0);
+
+    .wrapper{
+      padding: 40px 24px;
+      @include flex(column, flex-start, flex-start, 20px);
+      border-top: 1px solid $grey15;
+
+      & h3{
+        color: $green80;
+        font-size: 26px;
+        font-weight: 500;
+        line-height: 130%;
+        text-align: left;
+        border-bottom: 1px solid $grey15;
+        padding-bottom: 20px;
+      }
+
+      & p{
+        color: $grey60;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+      }
+    }
+  }
+
+  .vacancies{
+    width: 100%;
+    padding-top: 40px;
+    border-top: 1px solid $grey15;
+    @include flex(column, center, center, 40px);
+
+
+    .vacancy{
+      @include flex(column, center, center, 20px);
+
+      & h3{
+        width: 100%;
+        color: $grey60;
+        font-size: 20px;
+        font-weight: 500;
+        padding-bottom: 40px;
+        border-bottom: 1px solid $grey15;
+
+      }
+
+      .wrapper{
+        .block{
+          padding: 24px;
+          @include flex(column, flex-start, flex-start, 30px);
+          border-bottom: 1px solid $grey15;
+
+          .info{
+            @include flex(column, center, flex-start, 24px);
+
+            .icon{
+              display: flex;
+              padding: 16px;
+              flex-direction: column;
+              align-items: flex-start;
+              gap: 10px;
+              border-radius: 6px;
+              border: 1px solid #2E2E2E;
+              background: linear-gradient(131deg, rgba(158, 255, 0, 0.20) -114.98%, rgba(158, 255, 0, 0.00) 40.25%), linear-gradient(180deg, #242424 0%, rgba(36, 36, 36, 0.00) 100%);
+            }
+
+            .text{
+              @include flex(column, center, flex-start, 14px);
+
+              & h3{
+                text-align: left;
+                color: $white;
+                font-size: 20px;
+                font-weight: 500;
+                line-height: 150%;
+                letter-spacing: -0.12px;
+              }
+
+              & p{
+                color: $paragraph;
+                font-size: 14px;
+                font-weight: 400;
+                line-height: 150%;
+                letter-spacing: -0.084px;
+              }
+            }
+          }
+        }
+      }
+
+    }
+  }
+
+  @include breakpoint(laptop) {
+    padding-top: 80px;
+
+    .welcome{
+      gap: 40px;
+      padding: 0 40px;
+
+      .intro{
+        gap: 10px;
+
+        & h2{
+          font-size: 38px;
+        }
+
+        & p{
+          font-size: 16px;
+          letter-spacing: -0.096px;
+          width: 950px;
+        }
+
+      }
+
+      .why{
+        font-size: 18px;
+      }
+    }
+
+    .work{
+      flex-direction: row;
+      flex-wrap: wrap;
+      border-bottom: 1px solid $grey15;
+
+      .wrapper{
+        width: 50%;
+        padding: 80px 40px;
+        height: 380px;
+        border-top: 1px solid $grey15;
+        border-left: 1px solid $grey15;
+
+        & h3{
+          font-size: 26px;
+        }
+
+        & p{
+          font-size: 16px;
+        }
+      }
+    }
+
+    .vacancies{
+
+      .vacancy{
+        @include flex(column, center, center, 20px);
+
+
+        & h3{
+          font-size: 22px;
+          text-align: left;
+          padding-left: 40px;
+
+        }
+
+        .wrapper{
+          @include flex(row, flex-start, flex-start, 0);
+          flex-wrap: wrap;
+
+          .block{
+            width: calc(100% /3);
+            padding: 40px;
+            height: 550px;
+            @include flex(column, space-between, flex-start, 0);
+            border-left: 1px solid $grey15 ;
+
+
+            .info{
+              justify-content: flex-start;
+
+              .icon{
+                padding: 20px;
+              }
+
+              .text{
+                @include flex(column, flex-start, flex-start, 14px);
+
+                & h3{
+                  text-align: left;
+                  border: none;
+                  padding-bottom: 0;
+                  padding-left: 0;
+                }
+
+                & p{
+                  font-size: 16px;
+                  letter-spacing: -0.096px;
+                }
+              }
+            }
+          }
+        }
+
+
+      }
+    }
+
+  }
+
+  @include breakpoint(desktop) {
+    .vacancies{
+
+      .vacancy{
+
+        .wrapper{
+          .block{
+            height: 500px;
+          }
+        }
+      }
+    }
+  }
+
+  @include breakpoint(large) {
+    padding-top: 120px;
+    gap: 50px;
+
+    .welcome{
+      gap: 50px;
+      padding: 0 50px;
+
+      .intro{
+        gap: 14px;
+
+        & h2{
+          font-size: 48px;
+        }
+
+        & p{
+          font-size: 18px;
+          letter-spacing: -0.108px;
+          width: 1195px;
+        }
+      }
+
+      .why{
+        padding: 12px 14px;
+        font-size: 22px;
+      }
+    }
+
+    .work{
+      .wrapper{
+        gap: 50px;
+        padding: 100px 50px;
+        height: 480px;
+
+        & h3{
+          font-size: 40px;
+          padding-bottom: 50px;
+        }
+
+        & p{
+          font-size: 18px;
+        }
+      }
+    }
+
+    .vacancies{
+
+      .vacancy{
+        gap: 50px;
+
+        & h3{
+          font-size: 28px;
+          padding-left: 50px;
+        }
+
+        .wrapper{
+
+          .block{
+            padding: 50px;
+            height: 550px;
+
+            .info{
+
+              .icon{
+                padding: 24px;
+              }
+
+              .text{
+                gap: 20px;
+
+                & h3{
+                  font-size: 24px;
+                }
+
+                & p{
+                  font-size: 18px;
+                  letter-spacing: -0.108px;
+                }
+              }
+            }
+
+            & button {
+              font-size: 18px;
+            }
+          }
+        }
+      }
+    }
+
+  }
+}
