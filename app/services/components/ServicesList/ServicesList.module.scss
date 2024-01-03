@@ -1,0 +1,23 @@
+@import "../../../../styles/utils/variables";
+@import "../../../../styles/utils/mixin";
+
+.service-wrapper {
+  padding-top: 40px;
+  @include flex(column, center, center, 40px);
+
+  @include breakpoint(laptop) {
+    padding-top: 80px;
+    @include flex(column, center, center, 40px);
+  }
+
+  @include breakpoint(large) {
+    padding-top: 120px;
+    @include flex(column, center, center, 50px);
+  }
+
+
+}
+
+.description{
+  @include flex(column, center, center, 40px);
+}

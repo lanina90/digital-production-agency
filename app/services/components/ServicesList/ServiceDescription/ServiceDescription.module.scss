@@ -1,0 +1,98 @@
+@import "../../../../../styles/utils/variables";
+@import "../../../../../styles/utils/mixin";
+
+.wrapper{
+  @include flex(column, center, center, 40px);
+
+  & h3{
+    color: $grey60;
+    text-align: center;
+    font-size: 20px;
+    font-weight: 500;
+    line-height: normal;
+  }
+
+  .description{
+    display: flex;
+    flex-wrap: wrap;
+
+    .item{
+      width: 50%;
+      @include flex(column, flex-start, flex-start, 20px);
+      padding: 20px;
+      border: 1px solid #2E2E2E;
+
+      .icon{
+        @include flex(column, center, center, 0);
+        padding: 16px;
+        border-radius: 6px;
+        border: 1px solid #2E2E2E;
+        background: linear-gradient(229deg, rgba(158, 255, 0, 0.20) -68.25%, rgba(158, 255, 0, 0.00) 32.16%), linear-gradient(180deg, #242424 0%, rgba(36, 36, 36, 0.00) 100%);
+
+        & img{
+          width: 24px;
+          height: 24px;
+        }
+      }
+
+      & h4{
+        color: $paragraph;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+        letter-spacing: -0.096px;
+      }
+    }
+  }
+
+  @include  breakpoint(laptop){
+    @include flex(column, center, flex-start, 50px);
+    padding-left: 50px;
+    width: 100%;
+
+    & h3{
+      font-size: 28px;
+    }
+
+    .description{
+
+      .item{
+        @include flex(column, flex-start, flex-start, 30px);
+        padding: 50px;
+
+        .icon{
+          padding: 24px;
+        }
+      }
+    }
+  }
+
+  @include  breakpoint(large){
+    @include flex(column, center, flex-start, 50px);
+    padding-left: 40px;
+
+    & h3{
+      font-size: 28px;
+      padding-left: 50px;
+    }
+
+    .description{
+      .item{
+        width: 25%;
+        @include flex(column, flex-start, flex-start, 24px);
+        padding: 40px;
+
+        .icon{
+          padding: 20px;
+        }
+
+        & h4{
+          font-size: 20px;
+        }
+      }
+
+
+    }
+  }
+}

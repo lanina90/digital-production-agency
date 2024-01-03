@@ -4,7 +4,7 @@ import Services from "@/app/components/Services/Services";
 import WhyUs from "@/app/components/WhyUs/WhyUs";
 import Testimonials from "@/app/components/Testimonials/Testimonials";
 import AskedQuestions from "@/app/components/FAQ/AskedQuestions";
-import Contact from "@/app/components/Contact/Contact";
+import Contact from "@/components/ContactUs/Contact";
 
 
 export default function Home() {
@@ -16,7 +16,8 @@ export default function Home() {
       <WhyUs/>
       <Testimonials/>
       <AskedQuestions/>
-      <Contact/>
+      <Contact text='We would love to hear from you and discuss how we can help bring your digital ideas to life. Here are the
+            different ways you can get in touch with us.' title='Thank you for your Interest in SquareUp.'/>
     </>
   )
 }
