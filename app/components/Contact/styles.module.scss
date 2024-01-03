@@ -1,0 +1,127 @@
+@import "styles/utils/variables";
+@import "styles/utils/mixin";
+
+.contact{
+
+  .intro {
+    background: url("/images/services/green-background.jpg");
+    filter: grayscale(30%);
+    position: relative;
+    background-size: cover;
+    padding: 50px 16px;
+    @include flex(column, center, center, 28px);
+
+    &::before {
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      background: rgba(33, 32, 32, 0.6);
+    }
+
+    .icon{
+      z-index: 999;
+    }
+
+    .text{
+      z-index: 999;
+
+      & h2 {
+        color: #FFF;
+        text-align: center;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 600;
+      }
+
+      & p {
+        color: $paragraph;
+        text-align: center;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 24px;
+        letter-spacing: -0.084px;
+      }
+    }
+
+    .action{
+      z-index: 999;
+    }
+
+  }
+  @include breakpoint(tablet){
+    .intro{
+
+      .text{
+        @include flex(column, center, center, 20px);
+
+        & p{
+          width: 70%;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(desktop){
+
+
+    .intro{
+      padding: 100px 250px;
+      @include flex(column, center, center, 40px);
+
+      .icon{
+        & img{
+          width: 60px;
+          height: 60px;
+        }
+      }
+
+
+      .text{
+        @include flex(column, center, center, 20px);
+
+        & h2{
+          font-size: 30px;
+        }
+
+        & p{
+          width: 70%;
+          font-size: 16px;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(large){
+
+
+    .intro{
+      padding: 120px 350px;
+      @include flex(column, center, center, 50px);
+
+      .icon{
+        & img{
+          width: 80px;
+          height: 80px;
+        }
+      }
+
+
+      .text{
+        @include flex(column, center, center, 20px);
+
+        & h2{
+          font-size: 38px;
+        }
+
+        & p{
+          width: 70%;
+          font-size: 18px;
+        }
+      }
+    }
+  }
+}

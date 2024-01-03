@@ -1,0 +1,39 @@
+@import '../../../styles/utils/variables';
+@import '../../../styles/utils/mixin';
+
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(30, 30, 30, 0.6);
+  z-index: 1;
+}
+
+.modal {
+  width: 320px;
+  height: 30%;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: $grey15;
+  border-radius: 16px;
+  z-index: 2;
+  @include flex(column, flex-start, center, 10px);
+
+  .info {
+    padding: 20px 30px;
+    @include flex(column, center, center, 20px)
+  }
+
+  .icon {
+    align-self: flex-end;
+    padding-right: 10px;
+    padding-top: 10px;
+    width: 40px;
+    height: 40px;
+  }
+
+}
