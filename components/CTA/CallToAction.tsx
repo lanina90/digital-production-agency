@@ -29,8 +29,8 @@ const CallToAction = () => {
               Innovation.</p>
           </div>
         </div>
-        <Button variant='filled' component='button' onClick={() => setIsOpen(!isOpen)} className={styles.action}>Start
-          Project</Button>
+        <Button variant='filled' component='button' onClick={() => setIsOpen(!isOpen)}
+                className={styles.action}>Start Project</Button>
       </div>
       {isOpen && <ContactForm/>}
     </div>

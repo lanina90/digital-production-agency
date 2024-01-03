@@ -63,13 +63,13 @@
 
     .action{
       justify-content: center;
+      width: 170px;
     }
 
 
   }
 
   @include breakpoint(laptop){
-    .cta{
       padding: 60px;
       gap: 40px;
 
@@ -105,17 +105,10 @@
           }
         }
 
-        .action{
-          width: 50%;
-        }
-
       }
-
-    }
   }
 
   @include breakpoint(desktop){
-    .cta{
       padding: 60px;
       gap: 40px;
 
@@ -145,18 +138,10 @@
           }
         }
 
-        .action{
-          width: 119px;
-        }
-
       }
-
-
-    }
   }
 
   @include breakpoint(large){
-    .cta{
       padding: 80px;
       gap: 50px;
 
@@ -194,11 +179,7 @@
           }
         }
 
-        .action{
-          width: 170px;
-        }
-
       }
-    }
+
   }
 }
