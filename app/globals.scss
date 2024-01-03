@@ -79,3 +79,22 @@
   }
 
 }
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #344814;
+  border-radius: 6px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #344814;
+}
+
+::-webkit-scrollbar-track {
+  background: #797373;
+  border-radius: 6px;
+}
