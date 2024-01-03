@@ -2,7 +2,7 @@ import React, {Fragment} from 'react';
 import PageIntro from "@/components/PageIntro/PageIntro";
 import styles from './ProcessList.module.scss'
 import {processes} from "@/utils/process";
-import ProcessCard from "@/app/process/ProcessList/ProcessCard/ProcessCard";
+import ProcessCard from "@/components/ProcessCard/ProcessCard";
 
 
 const ProcessList = () => {
