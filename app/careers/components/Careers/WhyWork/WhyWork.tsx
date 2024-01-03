@@ -13,7 +13,7 @@ const WhyWork = () => {
       <div className={styles.wrapper}>
         <h3>Supportive Environment</h3>
         <p>At SquareUp, you&apos;ll have the opportunity to work on exciting and impactful projects that shape the digital
-          landscape. From designing intuitive user interfaces to developing robust software solutions, you'll be part of
+          landscape. From designing intuitive user interfaces to developing robust software solutions, you&apos;ll be part of
           a team that creates products that make a difference.</p>
       </div>
       <div className={styles.wrapper}>
