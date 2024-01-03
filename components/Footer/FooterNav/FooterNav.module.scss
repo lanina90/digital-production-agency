@@ -1,0 +1,19 @@
+@import "../../../styles/utils/variables";
+@import "../../../styles/utils/mixin";
+
+.nav{
+  @include flex(row, center, center, 20px);
+  flex-wrap: wrap;
+  color: $paragraph;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 150%;
+
+  @include breakpoint(large){
+    @include flex(row, center, center, 30px);
+    font-size: 18px;
+  }
+
+
+
+}

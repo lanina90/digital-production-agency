@@ -3,6 +3,7 @@ import { Barlow } from 'next/font/google'
 import './globals.scss'
 import Container from "@/components/Container/Container";
 import Header from "@/components/Header/Header";
+import Footer from "@/components/Footer/Footer";
 
 const barlow = Barlow({
   variable: '--barlow-font',
@@ -32,6 +33,7 @@ export default function RootLayout({
           {children}
         </Container>
       </main>
+      <Footer/>
       </body>
     </html>
   )
