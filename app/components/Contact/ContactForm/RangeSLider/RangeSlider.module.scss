@@ -1,0 +1,119 @@
+@import "../../../../../styles/utils/variables";
+@import "../../../../../styles/utils/mixin";
+
+.wrapper{
+  width: 100%;
+  display: grid;
+  grid-template-columns: 100%;
+  grid-gap: 20px;
+
+
+
+  .element {
+
+    .slider {
+      height: 2px;
+      position: relative;
+      background: #333;
+      border-radius: 5px;
+
+      .progress {
+        height: 100%;
+        left: 25%;
+        right: 25%;
+        position: absolute;
+        border-radius: 5px;
+        background: #9EFF00;
+      }
+    }
+
+    .range-input {
+      position: relative;
+
+      & input {
+        position: absolute;
+        width: 100%;
+        height: 5px;
+        top: -5px;
+        background: none;
+        pointer-events: none;
+        -webkit-appearance: none;
+        -moz-appearance: none;
+      }
+
+      & input[type="range"]::-webkit-slider-thumb {
+        height: 18px;
+        width: 18px;
+        border-radius: 50%;
+        background: #9EFF00;
+        pointer-events: auto;
+        -webkit-appearance: none;
+        box-shadow: 0 0 15px rgba(168, 252, 65, 1);
+      }
+
+      & input[type="range"]::-moz-range-thumb {
+        height: 18px;
+        width: 18px;
+        border: none;
+        border-radius: 50%;
+        background:  #9EFF00;
+        pointer-events: auto;
+        -moz-appearance: none;
+        box-shadow: 0 0 15px rgba(168, 252, 65, 1);
+      }
+    }
+  }
+
+  .values{
+    color: #FFFFFF;
+    width: 100%;
+    padding-top: 10px;
+    @include flex(row, center, center, 0)
+
+  }
+
+  @include breakpoint(laptop){
+    .element {
+
+      .slider {
+        height: 4px;
+      }
+
+      .range-input {
+
+        & input[type="range"]::-webkit-slider-thumb {
+          height: 24px;
+          width: 24px;
+        }
+
+        & input[type="range"]::-moz-range-thumb {
+          height: 24px;
+          width: 24px;
+        }
+      }
+    }
+  }
+
+  @include breakpoint(large){
+    .element {
+
+      .slider {
+        height: 6px;
+      }
+
+      .range-input {
+
+        & input[type="range"]::-webkit-slider-thumb {
+          height: 26px;
+          width: 26px;
+        }
+
+        & input[type="range"]::-moz-range-thumb {
+          height: 26px;
+          width: 26px;
+        }
+      }
+    }
+  }
+
+}

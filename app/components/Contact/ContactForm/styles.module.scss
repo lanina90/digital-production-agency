@@ -1,0 +1,268 @@
+@import "../../../../styles/utils/variables";
+@import "../../../../styles/utils/mixin";
+
+.form{
+  @include flex(column, center, center, 30px);
+  padding: 24px;
+
+  .name{
+    width: 100%;
+    @include flex(column, center, center, 30px);
+  }
+
+  .label{
+    width: 100%;
+    @include flex(column, flex-start, flex-start, 14px);
+    padding: 18px 24px;
+    border-radius: 6px;
+    border: 1px solid $grey15;
+    background: rgba(36, 36, 36, 0.50);
+
+    & span{
+      color: #FFF;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: 150%;
+    }
+
+    & input, & textarea{
+      background: transparent;
+      outline: none;
+      border: none;
+      border-bottom: 1px solid $grey15;
+      padding-bottom: 8px;
+      color: #FFF;
+    }
+
+    & input::placeholder{
+      color: #656567;
+    }
+
+    & textarea{
+      padding-bottom: 34px;
+      width: 100%;
+    }
+  }
+
+  .reason{
+    @include flex(column, flex-start, flex-start, 14px);
+    width: 100%;
+    padding: 30px 24px;
+    border-radius: 6px;
+    border: 1px solid $grey15;
+    background: rgba(36, 36, 36, 0.50);
+
+    & p{
+      font-size: 16px;
+      color: #FFF;
+    }
+
+    & select{
+      background: transparent;
+      color: #FFF;
+      padding: 4px;
+      border: 1px solid $grey15;
+      border-radius: 6px;
+      width: 100%;
+      outline: none;
+
+
+      & option{
+        color: #FFF;
+        background: $grey15;
+      }
+    }
+  }
+
+  .budget{
+    @include flex(column, flex-start, flex-start, 24px);
+    width: 100%;
+    padding: 30px 24px;
+    border-radius: 6px;
+    border: 1px solid $grey15;
+    background: rgba(36, 36, 36, 0.50);
+
+    .text{
+      @include flex(column, flex-start, flex-start, 6px);
+
+      & p{
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 500;
+        line-height: 150%;
+      }
+
+      & span{
+        color: #E6E6E6;
+        font-size: 14px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+        letter-spacing: -0.084px;
+      }
+    }
+
+    .range{
+      display: flex;
+      padding: 20px 3px;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+      align-self: stretch;
+
+
+    }
+  }
+
+  & button{
+    justify-content: center;
+  }
+
+  @include breakpoint(tablet){
+  padding: 40px;
+  }
+
+  @include breakpoint(laptop){
+    width: 846px;
+    padding: 60px;
+    margin: auto;
+
+    .name{
+      @include flex(row, center, center, 30px);
+
+      & .label{
+        width: 348px;
+      }
+    }
+  }
+
+  @include breakpoint(laptop){
+    width: 846px;
+    padding: 60px;
+    margin: auto;
+
+    .name{
+      @include flex(row, center, center, 30px);
+
+      & .label{
+        width: 348px;
+      }
+    }
+
+    .label{
+      @include flex(column, flex-start, flex-start, 16px);
+      padding: 20px 30px;
+
+      & input::placeholder{
+        font-size: 18px;
+      }
+
+      & span{
+        font-size: 18px;
+      }
+
+      & input, & textarea{
+        padding-bottom: 6px;
+      }
+
+      & textarea{
+        padding-bottom: 6px;
+        width: 100%;
+      }
+    }
+
+    .reason{
+      @include flex(column, flex-start, flex-start, 30px);
+      padding: 30px;
+
+      & p{
+        font-size: 18px;
+      }
+
+      & select{
+        padding: 10px;
+      }
+    }
+
+    .budget{
+      @include flex(column, flex-start, flex-start, 30px);
+      padding: 30px;
+
+      .text{
+        @include flex(column, flex-start, flex-start, 14px);
+
+        & p{
+          font-size: 18px;
+        }
+
+        & span{
+          font-size: 16px;
+        }
+      }
+    }
+
+    & button {
+      width: 145px;
+    }
+  }
+
+  @include breakpoint(large){
+    width: 1060px;
+    padding: 80px;
+    @include flex(column, center, center, 40px);
+
+    .name{
+      @include flex(row, center, center, 40px);
+
+      & .label{
+        width: 430px;
+
+      }
+    }
+
+    .label{
+      @include flex(column, flex-start, flex-start, 20px);
+      padding: 24px 40px;
+
+      & span{
+        font-size: 22px;
+      }
+
+     & input::placeholder{
+       font-size: 20px;
+     }
+    }
+
+    .reason{
+      @include flex(column, flex-start, flex-start, 40px);
+      padding: 40px;
+
+      & p{
+        font-size: 22px;
+      }
+
+      & select{
+        padding: 10px;
+        font-size: 18px;
+      }
+    }
+
+    .budget{
+      @include flex(column, flex-start, flex-start, 40px);
+      padding: 40px;
+
+      .text{
+
+        & p{
+          font-size: 22px;
+        }
+
+        & span{
+          font-size: 18px;
+        }
+      }
+    }
+  }
+
+}
